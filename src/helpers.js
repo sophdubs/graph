@@ -26,6 +26,6 @@ export const swap = function (arr) {
            barB.style.gridArea = tempArea;
 
 
-       }, i * 50);
+       }, i * 100);
    }
 }

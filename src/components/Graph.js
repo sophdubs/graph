@@ -1,7 +1,6 @@
 import React from "react";
 import Bars from "./Bars";
 
-// import { bubbleSort } from "../algorithms/bubbleSort";
 import { swap } from "../helpers";
 import '../styles/graph.css';
 

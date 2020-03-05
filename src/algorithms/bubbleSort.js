@@ -2,7 +2,7 @@ export const sort = function(nums) {
     let moves=[];
     let swapped;
 
-    function helper(arr) {
+    function bubbleSort(arr) {
         swapped = false;
         let end = arr.length -1;
         for (let i = 0; i < end; i++) {
@@ -18,7 +18,7 @@ export const sort = function(nums) {
         end --;
     }
     do {
-        helper(nums);
+        bubbleSort(nums);
     } while (swapped);
     return moves; 
 }

@@ -1,10 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
-
 class Home extends React.Component {
-
     render() {
         return (
         <div>
@@ -15,6 +12,12 @@ class Home extends React.Component {
                     algorithm: 'bubbleSort'
                 }
             }}>Go To Bubble Sort</Link>
+            <Link to={{
+                pathname:"/Graph/insertionSort",
+                state: {
+                    algorithm: 'insertionSort'
+                }
+            }}>Go To Insertion Sort</Link>
         </div>
         );
     };
