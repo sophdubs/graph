@@ -1,4 +1,4 @@
-export const bubbleSort = function(nums) {
+export const sort = function(nums) {
     let moves=[];
     let swapped;
 

@@ -1,16 +1,19 @@
 import React from "react";
 import Bars from "./Bars";
 
-import { bubbleSort } from "../algorithms/bubbleSort";
+// import { bubbleSort } from "../algorithms/bubbleSort";
 import { swap } from "../helpers";
 import '../styles/graph.css';
 
 
 class Graph extends React.Component {
-    sortBars() {
+    sortBars = () => {
+        const algorithm = this.props.location.state.algorithm;
         const bars = Array.from(document.querySelectorAll(".bar-list li"));
-        let moves = bubbleSort(bars);
-        swap(moves);
+        import(`../algorithms/${algorithm}`).then((module) => {
+            const moves = module.sort(bars);
+            swap(moves);
+        });
     }
 
     render() {
