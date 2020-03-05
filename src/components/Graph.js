@@ -8,7 +8,6 @@ import '../styles/graph.css';
 
 class Graph extends React.Component {
     sortBars() {
-        console.log('CLICKED');
         const bars = Array.from(document.querySelectorAll(".bar-list li"));
         let moves = bubbleSort(bars);
         swap(moves);

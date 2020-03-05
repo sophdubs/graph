@@ -1,13 +1,13 @@
 import React from 'react';
-import { getRandomInt } from "../helpers";
+import { generateShuffledArray } from "../helpers";
 
 class Bars extends React.Component {
     componentDidMount() {
         const list = document.querySelector('.bar-list');
         const barList = [];
-        for (let i = 0; i < 10; i++) {
-            const num = getRandomInt();
-            barList.push(`<li class="bar index${num}" style="grid-area: a${i}; height:${num}%;">${num}</li>`);
+        const nums = generateShuffledArray();
+        for (let i = 0; i < nums.length; i++) {
+            barList.push(`<li class="bar index${nums[i]}" style="grid-area: a${i}; height:${nums[i]}%;">${nums[i]}</li>`);
         }
         list.innerHTML=barList.join('');
     }

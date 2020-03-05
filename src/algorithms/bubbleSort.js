@@ -20,6 +20,5 @@ export const bubbleSort = function(nums) {
     do {
         helper(nums);
     } while (swapped);
-    
     return moves; 
 }

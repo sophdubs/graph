@@ -1,7 +1,16 @@
 const MAX = 99;
-export const getRandomInt = function(){
-    return Math.floor(Math.random() * Math.floor(MAX)) + 1;
-};
+const LENGTH = 20;
+
+export const generateShuffledArray = function() {
+    let myArr = [];
+    while (myArr.length < LENGTH) {
+        let num = Math.floor(Math.random() * Math.floor(MAX)) + 1;
+        if (!myArr.includes(num)) {
+            myArr.push(num);
+        }
+    }
+    return myArr;
+}
 
 export const swap = function (arr) {
    for (let i = 0; i < arr.length; i++) {
@@ -17,6 +26,6 @@ export const swap = function (arr) {
            barB.style.gridArea = tempArea;
 
 
-       }, i * 800);
+       }, i * 50);
    }
 }
