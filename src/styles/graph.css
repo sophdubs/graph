@@ -1,0 +1,38 @@
+div .graph {
+    position: relative;
+    margin: auto;
+    background: black;
+    width: 80vw;
+    height: 60vh;
+    color: greenyellow;
+}
+
+div.bars {
+    height: 100%;
+}
+
+ul.bar-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 'a0 a1 a2 a3 a4 a5 a6 a7 a8 a9';
+    grid-gap: 1vw;
+    height: 100%;
+    padding: 0 2vw;
+    position: relative;
+    margin: auto;
+}
+
+li.bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: greenyellow;
+    height: 100%;
+}
+
+
+
+
+
